@@ -3,22 +3,21 @@ import "./App.css";
 import React from "react";
 
 class App extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props);
-    this.state = {
-      logo: logo,
-      isBff: false,
-    };
-    console.log(this);
-    // 解决changeState中this指向问题
-    this.changeState = this.changeState.bind(this);
   }
 
-  changeState() {
+  state = {
+    logo: logo,
+    isBff: false,
+  };
+
+  changeState = () => {
     this.setState((state) => ({
       isBff: !state.isBff,
     }));
-  }
+  };
 
   componentDidMount() {}
 
@@ -32,7 +31,7 @@ class App extends React.Component {
           <p onClick={this.changeState}>
             Edit <code>src/App.js</code> and save to reload.{" "}
             {this.state.isBff ? "炎热" : "寒冷"}
-          </p> 
+          </p>
           <a
             className="App-link"
             href="https://reactjs.org"
