@@ -3,6 +3,7 @@ import "./App.css";
 import React from "react";
 import PropTypes from "prop-types";
 import Son from './views/son';
+import Login from './views/login2';
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
@@ -44,6 +45,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={this.state.logo} className="App-logo" alt="logo" />
+          <Login></Login>
           <p onClick={this.changeState}>
             {this.props.name} <code>src/App.js</code> and save to reload.{" "}
             {this.state.isBff ? "炎热" : "寒冷"}
