@@ -4,6 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Son from "./views/son";
 import Login from "./views/highFunction2";
+import Life from "./views/life";
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
@@ -44,6 +45,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
+          <Life></Life>
           <img src={this.state.logo} className="App-logo" alt="logo" />
           <Login></Login>
           <p onClick={this.changeState}>
