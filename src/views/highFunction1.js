@@ -9,12 +9,13 @@ export default class Login extends React.Component {
     e.preventDefault(); // 组织表单默认提交
     console.log(this.state);
   };
-  saveStates = (e) => {
-    // 使用统一方法不用传参，通过e识别dom
-    const name = e.target.name;
-    this.setState({
-      [name]: e.target.value,
-    });
+  saveStates = (type) => {
+    // 此方法下直接传参即可，传参数类型
+    return (e) => {
+      this.setState({
+        [type]: e.target.value,
+      });
+    };
   };
   render() {
     return (
@@ -28,7 +29,7 @@ export default class Login extends React.Component {
           <input
             type="text"
             name="username"
-            onChange={this.saveStates}
+            onChange={this.saveStates('username')}
             placeholder="请输入用户姓名"
           ></input>
         </div>
@@ -36,7 +37,7 @@ export default class Login extends React.Component {
           <input
             type="password"
             name="password"
-            onChange={this.saveStates}
+            onChange={this.saveStates('password')}
             placeholder="请输入用户密码"
           ></input>
         </div>

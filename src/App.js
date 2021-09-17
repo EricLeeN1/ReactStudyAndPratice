@@ -3,7 +3,7 @@ import "./App.css";
 import React from "react";
 import PropTypes from "prop-types";
 import Son from "./views/son";
-import Login from "./views/highFunction";
+import Login from "./views/highFunction2";
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
