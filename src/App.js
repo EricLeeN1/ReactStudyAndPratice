@@ -2,8 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 import PropTypes from "prop-types";
-import Son from './views/son';
-import Login from './views/login2';
+import Son from "./views/son";
+import Login from "./views/highFunction";
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
