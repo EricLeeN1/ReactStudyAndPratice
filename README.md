@@ -75,3 +75,9 @@ render 1+n 次 第一次是初次渲染，之后是每次state中数据更新
 constructor 
 1、初始化state
 2、绑定this
+
+受控组件 随输入维护状态
+不用写ref 
+非受控组件 现用现取，需要ref, 
+**Tips：** 勿过度使用ref
+
